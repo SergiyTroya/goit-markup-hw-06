@@ -9,7 +9,7 @@
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
-  line-height: 31px;
+  line-height: 1.19;
   /* identical to box height */
 
   letter-spacing: 0.03em;
@@ -22,7 +22,19 @@
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
-  line-height: 31px;
+  line-height: 1.19;
+  /* identical to box height */
+
+  letter-spacing: 0.03em;
+  color: black;
+}
+
+.index {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
   /* identical to box height */
 
   letter-spacing: 0.03em;
@@ -31,14 +43,15 @@
 
 body {
   background-color: var(--color-background);
-  color: var(--#212121);
+  color:var(--color-primary); 
   margin: 0;
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
 }
 .main-content {
   width: 1170px;
   height: 1360px;
   margin-left: 219px;
+  margin-bottom: 100px;
   background-color: white;
 }
 .main-filters {
@@ -49,7 +62,7 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 26px;
+  line-height: 1.6;
   /* identical to box height, or 162% */
 }
 .main-filters button {
@@ -65,7 +78,29 @@ body {
   border: none;
   cursor: pointer;
 }
-
+#button1 {
+  width: 73px;
+  height: 38px;
+}
+#button2 {
+  width: 125px;
+  height: 38px;
+}
+#button3 {
+  width: 112px;
+  height: 38px;
+}
+#button4 {
+  width: 103px;
+  height: 38px;
+}
+#button5 {
+  width: 130px;
+  height: 38px;
+}
+.projects {
+  margin-bottom: 1000px;
+}
 .examples {
   display: flex;
   justify-content: space-around;
@@ -86,7 +121,7 @@ body {
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
-  line-height: 36px;
+  line-height: 2;
   /* identical to box height, or 200% */
 
   letter-spacing: 0.06em;
@@ -100,7 +135,7 @@ body {
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
-  line-height: 36px;
+  line-height: 2;
   /* identical to box height, or 200% */
 
   letter-spacing: 0.06em;
@@ -115,10 +150,11 @@ li {
   width: 370px;
   height: 294px;
 }
-ul {
+ul,
+nav {
   padding: 0;
 }
-.ulclass {
+.navclass {
   margin: 0;
   display: flex;
 }
@@ -135,11 +171,11 @@ footer {
   background: #2f303a;
 }
 
-.studio-li {
+.index-li {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--color-primary);
   text-decoration: none;
@@ -149,7 +185,7 @@ footer {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--color-primary);
@@ -159,7 +195,7 @@ footer {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
 }
@@ -168,7 +204,7 @@ footer {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
 
   color: #2196f3;
@@ -179,7 +215,7 @@ footer {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
   color: #757575;
 }
@@ -192,32 +228,29 @@ header {
   background: #ffffff;
 }
 .logo {
+  text-decoration: none;
   margin-left: 215px;
   margin-top: 24px;
   margin-bottom: 25px;
 }
 
-.li1 {
+.navclass a {
   list-style-type: none; /* Убираем маркеры */
   display: inline-block; /* Отображать как строчный элемент */
   margin-top: 32px;
   margin-left: 93px;
 }
-.li1 > a:hover {
-  color: #2196f3;
-}
-div > a:hover {
+.navclass > a:hover,
+.links a:hover {
   color: #2196f3;
 }
 
-.li1 > a:focus {
-  color: #2196f3;
-}
-div > a:focus {
+.navclass > a:focus,
+.links > a:focus {
   color: #2196f3;
 }
 .links {
-  display: inline-block;
+  display: flex;
   margin-left: 294px;
   margin-top: 27px;
 }
@@ -232,7 +265,7 @@ div > a:focus {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.71;
   /* or 171% */
 
   letter-spacing: 0.03em;
@@ -240,39 +273,12 @@ div > a:focus {
   color: #ffffff;
 }
 
-.downlinks-mail {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  /* or 171% */
-  letter-spacing: 0.03em;
-
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.downtel {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  /* or 171% */
-
-  letter-spacing: 0.03em;
-
-  color: rgba(255, 255, 255, 0.6);
-}
-.logodown {
-  margin-top: 0;
-}
-.studio-footer {
+.index-footer {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
-  line-height: 31px;
+  line-height: 1.19;
   /* identical to box height */
 
   letter-spacing: 0.03em;
@@ -321,15 +327,17 @@ div > a:focus {
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 1.9;
   color: #ffffff;
 }
-
+.button-nottub:hover {
+  background-color: #188ce8;
+}
 h1 {
   margin: 0;
 }
 
-.ossoblivosty {
+.feature {
   width: 1600px;
   height: 760px;
 }
@@ -359,7 +367,7 @@ h1 {
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: left;
@@ -369,7 +377,7 @@ h1 {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.71;
   /* or 171% */
   text-align: left;
   letter-spacing: 0.03em;
@@ -380,7 +388,7 @@ h1 {
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
-  line-height: 42px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   margin-top: 50px;
@@ -398,7 +406,7 @@ h1 {
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
-  line-height: 42px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   display: inline-block;
   margin-left: 668px;
@@ -457,23 +465,11 @@ h1 {
 .jobs {
   text-align: center;
 }
-.address {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  /* or 171% */
-
-  letter-spacing: 0.03em;
-
-  color: #ffffff;
-}
-
 .downlinks-mail {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.71;
   /* or 171% */
 
   letter-spacing: 0.03em;
@@ -485,7 +481,7 @@ h1 {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.71;
   /* or 171% */
 
   letter-spacing: 0.03em;
@@ -500,7 +496,7 @@ h1 {
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
-  line-height: 31px;
+  line-height: 1.19;
   /* identical to box height */
 
   letter-spacing: 0.03em;

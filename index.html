@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Портфоліо</title>
+    <title>Студія</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,52 +14,48 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <!--main-->
+    <header>
+      <!--Логотип-->
+      <a href="/" class="logo"><span class="web">Web</span><span class="studio">Studio</span></a>
+      <nav class="navclass">
+        <a href="index.html" class="index-li">Студія</a>
+        <a href="portfolio.html" class="portfolio">Портфоліо</a>
+        <a href="/" class="contacts">Контакти</a>
+      </nav>
+      <ul class="links">
+        <li><a class="links-mail" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+        <li><a class="links-tel" href="tel+380961111111"> +38 096 111 11 11</a></li>
+      </ul>
+    </header>
     <section class="main">
-      <header>
-        <!--Логотип-->
-        <div class="logo"><span class="web">Web</span><span class="studio">Studio</span></div>
-        <ul class="ulclass">
-          <li class="li1"><a href="studio.html" class="studio-li">Студія</a></li>
-          <li class="li1"><a href="portfolio.html" class="portfolio">Портфоліо</a></li>
-          <li class="li1"><a href="/" class="contacts">Контакти</a></li>
-        </ul>
-        <div class="links">
-          <a class="links-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
-          <a class="links-tel" href="tel+380961111111"> +38 096 111 11 11</a>
-        </div>
-      </header>
       <section class="secton_with_button">
-        <h1 class="effect">
-          ЕФЕКТИВНІ РІШЕННЯ<br />
-          ДЛЯ ВАШОГО БІЗНЕСУ
-        </h1>
-        <h2><button class="button-nottub" type="button">Замовити послугу</button></h2>
+        <h1 class="effect">Ефективні рішення</h1>
+        <button class="button-nottub" type="button">Замовити послугу</button>
       </section>
 
       <!--Особливості-->
-      <section class="ossoblivosty">
+      <section class="feature">
         <ul class="speciffic">
           <li class="speciffic-1">
-            <h3 class="advantage">УВАГА ДО ДЕТАЛЕЙ</h3>
+            <h3 class="advantage">Увага до деталей</h3>
             <div class="description" style="width: 255px; height: 72px">
               Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
             </div>
           </li>
           <li class="speciffic-2">
-            <h3 class="advantage">ПУНКТУАЛЬНІСТЬ</h3>
+            <h3 class="advantage">Пунктуальність</h3>
             <div class="description" style="width: 270px; height: 48px">
               Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.
             </div>
           </li>
           <li class="speciffic-2">
-            <h3 class="advantage">ПЛАНУВАННЯ</h3>
+            <h3 class="advantage">Планування</h3>
             <div class="description" style="width: 270px; height: 48px">
               Так само консультація з широким активом значною мірою зумовлює.
             </div>
           </li>
           <li class="speciffic-2">
-            <h3 class="advantage">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+            <h3 class="advantage">Сучасні Технології</h3>
             <p class="description" style="width: 270px; height: 72px">
               Значимість цих проблем настільки очевидна, що реалізація планових завдань.
             </p>
@@ -68,28 +64,26 @@
 
         <!-- Секція фото -->
         <section>
-          <h3 class="demonstration">Чим ми займаємося</h3>
+          <h2 class="demonstration">Чим ми займаємося</h2>
           <ul class="whatwearedoing">
             <li class="box1">
               <img
                 src="images/box1.jpg"
                 alt="людина працює на компьютері"
-                style="width: 370px; height: 294px"
+                width="370"
+                height="294"
               />
             </li>
             <li class="boxs">
               <img
                 src="images/box2.jpg"
                 alt="людина працює на компьютері і смартфоні"
-                style="width: 370px; height: 294px"
+                width="370"
+                height="294"
               />
             </li>
             <li class="boxs">
-              <img
-                src="images/box3.jpg"
-                alt="людина працює на планшеті"
-                style="width: 370px; height: 294px"
-              />
+              <img src="images/box3.jpg" alt="людина працює на планшеті" width="370" height="294" />
             </li>
           </ul>
         </section>
@@ -97,9 +91,8 @@
 
       <!--Команда-->
 
-      <div class="names">
-        <h3 class="our-team">Наша команда</h3>
-        <br />
+      <section class="names">
+        <h2 class="our-team">Наша команда</h2>
         <ul>
           <li class="border-one">
             <img src="./images/igor.jpg" alt="фото чоловіка" style="width: 270px; height: 260px" />
@@ -130,21 +123,21 @@
             <p class="jobs">UI Designer</p>
           </li>
         </ul>
-      </div>
     </section>
+  </section>
 
-    <footer>
+    <footer class="block_footer">
       <!--Підвал-->
-      <div class="block_footer">
         <p class="logodown">
           <span class="web">Web</span><span class="studio-footer">Studio</span>
         </p>
-        <address class="address">м. Київ, пр-т Лесі Українки, 26 <br /></address>
-        <div>
-          <h3 class="downlinks-mail">info@devstudio.com</h3>
-          <h3 class="downtel">+3 096 111 11 11</h3>
-        </div>
-      </div>
+        <address class="address">
+        <ul>
+          <li>м. Київ, пр-т Лесі Українки, 26</li>
+          <li><a class="links-mail" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+        <li><a class="links-tel" href="tel+380961111111"> +38 096 111 11 11</a></li>
+        </ul>
+    </address>
     </footer>
   </body>
 </html>
