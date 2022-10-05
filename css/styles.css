@@ -43,7 +43,7 @@
 
 body {
   background-color: var(--color-background);
-  color:var(--color-primary); 
+  color: var(--color-primary);
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
@@ -285,10 +285,6 @@ header {
   color: #ffffff;
 }
 
-.block_footer {
-  padding-top: 60px;
-  padding-left: 215px;
-}
 /* studio */
 .secton_with_button {
   position: absolute;
@@ -489,7 +485,8 @@ h1 {
   color: rgba(255, 255, 255, 0.6);
 }
 .logodown {
-  margin-top: 0;
+  margin: 0;
+  padding-top: 60px;
 }
 .studio-footer {
   font-family: 'Raleway';
@@ -503,7 +500,7 @@ h1 {
   color: #ffffff;
 }
 
-.block_footer {
-  padding-top: 60px;
-  padding-left: 215px;
+.logodown,
+.address {
+  margin-left: 215px;
 }
