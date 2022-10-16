@@ -20,17 +20,15 @@
   <body>
     <header>
       <!--Логотип-->
-      <div class="header-container">
-        <div class="header-gap1">
+      <div class="container">
+        <div class="header-items">
           <a href="/" class="logo text-decoration-none"
             ><span class="web">Web</span><span class="studio">Studio</span></a
           >
           <nav class="navclass">
             <ul>
               <li>
-                <a
-                  href="index.html"
-                  class="index-link active text-decoration-none"
+                <a href="index.html" class="index-link active text-decoration-none"
                   >Студія</a
                 >
               </li>
@@ -48,25 +46,25 @@
               </li>
             </ul>
           </nav>
+          <ul class="links">
+            <li>
+              <a
+                class="links-mail text-decoration-none"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li>
+              <a class="links-tel text-decoration-none" href="tel+380"
+                >+38 096 111 11 11</a
+              >
+            </li>
+          </ul>
         </div>
-        <ul class="links">
-          <li>
-            <a
-              class="links-mail text-decoration-none"
-              href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
-          </li>
-          <li>
-            <a class="links-tel text-decoration-none" href="tel+380961111111"
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
       </div>
     </header>
     <main>
-      <section class="section section_with_button">
+      <section class="section_order">
         <div class="container">
           <h1 class="effect">Ефективні рішення для вашого бізнесу</h1>
           <button class="button-nottub" type="button">Замовити послугу</button>
@@ -74,8 +72,9 @@
       </section>
 
       <!--Особливості-->
-      <section class="section feature">
+      <section class="feature">
         <div class="container">
+          <h2 class="visually-hidden">Особливості</h2>
           <ul class="speciffic">
             <li>
               <h3 class="advantage">Увага до деталей</h3>
@@ -108,7 +107,7 @@
         </div>
       </section>
       <!-- Секція фото -->
-      <section class="section works">
+      <section class="works">
         <div class="container">
           <h2 class="demonstration">Чим ми займаємося</h2>
           <ul class="whatwearedoing">
@@ -142,7 +141,7 @@
 
       <!--Команда-->
 
-      <section class="section names">
+      <section class="names">
         <div class="container">
           <h2 class="our-team">Наша команда</h2>
           <ul class="cards">
@@ -201,12 +200,12 @@
 
     <footer>
       <!--Підвал-->
-      <div class="footer-container">
-        <a href="/" class="logo text-decoration-none"
-          ><span class="web">Web</span
-          ><span class="studio-footer">Studio</span></a
-        >
-        <br />
+      <div class="container">
+        <div class="link">
+        <a href="/" class="logo text-decoration-none">
+          <span class="web">Web</span><span class="studio-footer">Studio</span>
+        </a></div>
+        
         <address class="address">
           <ul class="footer-info">
             <li class="map-location">
@@ -220,13 +219,13 @@
             </li>
             <li>
               <a
-                class="links-mail text-decoration-none"
+                class="footer-links-mail text-decoration-none"
                 href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
             <li>
-              <a class="links-tel text-decoration-none" href="tel+380961111111">
+              <a class="footer-links-tel text-decoration-none" href="tel+380">
                 +38 096 111 11 11</a
               >
             </li>
