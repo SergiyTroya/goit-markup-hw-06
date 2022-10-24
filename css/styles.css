@@ -424,16 +424,16 @@ footer {
   height: 70px;
 }
 .antenna-svg::before {
-  background-image: url("../icons/icons.svg#icon-antenna");
+  background-image: url("./icons/icons.svg#icon-antenna");
 }
 .clock-svg::before {
-  background-image: url("../icons/icons.svg#icon-clock");
+  background-image: url("./icons/icons.svg#icon-clock");
 }
 .diagram-svg::before {
-  background-image: url("../icons/icons.svg#icon-diagram");
+  background-image: url("./icons/icons.svg#icon-diagram");
 }
 .astronaut-svg::before {
-  background-image: url("../icons/icons.svg#icon-astronaut");
+  background-image: url("./icons/icons.svg#icon-astronaut");
 }
 .advantage {
   font-weight: 700;
