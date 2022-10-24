@@ -3,7 +3,6 @@
   --color-secondary: #757575;
   --color-background: #ffffff;
 }
-/*pepe */
 ul,
 p,
 h1,
@@ -414,27 +413,11 @@ footer {
   border-radius: 4px;
   padding-top: 25px;
   padding-bottom: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
-.speciffic-hero::before {
-  content: "";
-  display: block;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  height: 70px;
-}
-.antenna-svg::before {
-  background-image: url("./icons/icons.svg#icon-antenna");
-}
-.clock-svg::before {
-  background-image: url("./icons/icons.svg#icon-clock");
-}
-.diagram-svg::before {
-  background-image: url("./icons/icons.svg#icon-diagram");
-}
-.astronaut-svg::before {
-  background-image: url("./icons/icons.svg#icon-astronaut");
-}
+
+
 .advantage {
   font-weight: 700;
   font-size: 14px;
