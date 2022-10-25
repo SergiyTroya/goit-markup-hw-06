@@ -537,13 +537,15 @@ footer {
   height: 20px;
   fill: #afb1b8;
 }
-
+.soc-links-logos-footer {
+  width: 20px;
+  height: 20px;
+  fill: var(--color-background);
+}
 .soc-links-buttons:hover .soc-links-logos, .soc-links-buttons:focus .soc-links-logos {
   fill: var(--color-background);
 }
-.soc-links-buttons:hover .white-fill, .soc-links-buttons:focus .white-fill {
-  fill: var(--color-background);
-}
+
 .cards {
   display: flex;
   align-items: center;
