@@ -134,6 +134,9 @@ body {
   border: none;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .examples {
   display: flex;
@@ -146,10 +149,12 @@ body {
   border: 1px solid #eeeeee;
   flex-basis: calc((100% - 60px) / 3);
 }
-.examples-link:hover, .examples-link:focus {
+.examples-link:hover,
+.examples-link:focus {
   display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .examples-info h2 {
   color: var(--color-primary);
@@ -177,8 +182,38 @@ body {
 li {
   list-style-type: none; /* Убираем маркеры */
 }
+.examples-img {
+  overflow: hidden;
+  position: relative;
+  height: 294px;
+}
+.examples-link:hover .examples-overlay, .examples-link:focus .examples-overlay {
+  transform: translatey(0);
+}
 .examples img {
+  position: absolute;
   width: 370px;
+}
+.examples-overlay {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 24px;
+  padding-right: 24px;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0.9;
+  transform: translatey(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.examples-overlay > p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
 }
 .examples-info {
   padding-top: 20px;
@@ -192,6 +227,7 @@ li {
 }
 .navclass li {
   flex-basis: calc((100% - 100px) / 3);
+  position: relative;
 }
 footer {
   padding-top: 60px;
@@ -230,6 +266,16 @@ footer {
 .active {
   color: #2196f3;
 }
+.active::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #2196f3;
+  border-radius: 2px;
+  position: absolute;
+  margin-top: 28px;
+}
 .contacts-link {
   color: var(--color-primary);
   font-weight: 500;
@@ -257,9 +303,12 @@ footer {
   fill: var(--color-secondary);
 }
 
-.links-mail:hover > .icon-mail, .links-mail:focus > .icon-mail,
-.links-tel:hover > .icon-smartphone, .links-tel:focus > .icon-smartphone {
+.links-mail:hover > .icon-mail,
+.links-mail:focus > .icon-mail,
+.links-tel:hover > .icon-smartphone,
+.links-tel:focus > .icon-smartphone {
   fill: #188ce8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-links-mail,
 .footer-links-tel {
@@ -286,6 +335,7 @@ footer {
 .links-mail:hover,
 .links-tel:hover {
   color: #2196f3;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo:focus,
 .index-link:focus,
@@ -294,6 +344,7 @@ footer {
 .links-mail:focus,
 .links-tel:focus {
   color: #2196f3;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .links {
   display: flex;
@@ -459,6 +510,31 @@ footer {
 .whatwearedoing li {
   width: 370px;
   height: 294px;
+  position: relative;
+}
+.whatwearedoing img {
+  position: absolute;
+}
+.whatwearedoing-overlay {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+  opacity: 0.9;
+}
+.whatwearedoing-overlay > p {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
 }
 .our-team {
   text-align: center;
@@ -527,11 +603,17 @@ footer {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
 }
-.soc-links-buttons:hover, .soc-links-buttons:focus {
+.soc-links-buttons:hover,
+.soc-links-buttons:focus {
   background-color: #188ce8;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .soc-links-logos {
   width: 20px;
   height: 20px;
@@ -542,8 +624,10 @@ footer {
   height: 20px;
   fill: var(--color-background);
 }
-.soc-links-buttons:hover .soc-links-logos, .soc-links-buttons:focus .soc-links-logos {
+.soc-links-buttons:hover .soc-links-logos,
+.soc-links-buttons:focus > .soc-links-logos {
   fill: var(--color-background);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cards {
@@ -589,6 +673,31 @@ footer {
   gap: 30px;
 }
 .our-clients-card {
+  /*
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px; */
+}
+.our-clients-logo {
+  fill: #afb1b8;
+}
+.our-clients-card:hover,
+.our-clients-logo-div:focus {
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.our-clients-card:hover .our-clients-logo,
+.our-clients-logo-div:focus > .our-clients-logo {
+  fill: #2196f3;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.our-clients-logo-div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -596,23 +705,6 @@ footer {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-}
-.our-clients-logo {
-  fill:#AFB1B8;
-}
-.our-clients-card:hover {
-  border: 1px solid #2196f3;
-}
-.our-clients-card:hover .our-clients-logo {
-  fill: #2196f3;
-}
-
-.our-clients-logo-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 106px;
-  height: 60px;
 }
 /* задание размеров лого компаний */
 .logo-1 {
@@ -681,6 +773,7 @@ footer {
   background-color: rgba(0, 0, 0, 0.2);
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   position: absolute;
@@ -691,6 +784,7 @@ footer {
   transform: translate(-50%, -50%);
   background-color: #ffffff;
   border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .modal-button-close {
   position: absolute;
@@ -703,5 +797,7 @@ footer {
   border-radius: 50%;
 }
 .is-hidden {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
