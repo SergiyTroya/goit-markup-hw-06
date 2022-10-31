@@ -54,13 +54,7 @@ header {
   display: flex;
   align-items: center;
 }
-.footer-ul {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  gap: 70px;
-  align-items: baseline;
-}
+
 .footer-logo {
   margin-bottom: 20px;
 }
@@ -96,6 +90,7 @@ body {
   background-color: var(--color-background);
   color: var(--color-primary);
   font-family: "Roboto", sans-serif;
+  outline: none;
 }
 .main-content {
   padding-top: 94px;
@@ -235,6 +230,13 @@ footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
+}
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+.footer-gap-div {
+  margin-left: 70px;
 }
 .map-location,
 .footer-link {
@@ -380,6 +382,10 @@ footer {
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
+}
+.subscribe_form {
+  display: flex;
+  align-items: center;
 }
 #email {
   width: 358px;
@@ -843,6 +849,11 @@ text-align: center; */
   justify-content: center;
   align-items: center;
   padding: 0;
+  cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-button-close:hover {
+  fill: #2196f3;
 }
 .modal-first-text {
   font-weight: 700;
@@ -853,11 +864,18 @@ text-align: center; */
   color: var(--color-primary);
   margin-bottom: 12px;
 }
-#modal-label-name,
-#modal-label-tel,
-#modal-label-email {
+.modal-labels {
   display: block;
   margin-bottom: 10px;
+}
+.modal-before-info {
+  /*text atr */
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--color-secondary);
+  margin-bottom: 4px;
 }
 #modal-label-comment {
   display: block;
@@ -866,6 +884,12 @@ text-align: center; */
 #modal-label-checkbox {
   display: block;
   margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  /* identical to box height, or 171% */
+  letter-spacing: 0.03em;
+  color: var(--color-primary);
 }
 .input[name="modal-form-checkbox-accept"] {
   display: none;
@@ -873,17 +897,9 @@ text-align: center; */
 .checkbox label:before {
   border-radius: 3px;
 }
-.modal h4 {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-  color: var(--color-secondary);
-  margin-bottom: 4px;
-}
-.modal input[name="modal-form-name"],
-.modal input[name="modal-form-tel"],
-.modal input[name="modal-form-email"] {
+
+.modal-input-class {
+  outline: none;
   width: 448px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -892,6 +908,8 @@ text-align: center; */
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal textarea[name="modal-form-comment"] {
+  outline: none;
+  display: block;
   width: 448px;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -930,28 +948,19 @@ input[type="checkbox"]:checked + .modal-span-checkbox {
   background-size: contain;
   background-origin: border-box;
 }
-.modal-div-checkbox > h3,
-.modal-div-checkbox > a {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  /* identical to box height, or 171% */
-  letter-spacing: 0.03em;
-  color: var(--color-primary);
-}
+
 .modal-div-checkbox > a {
   color: #2196f3;
 }
-#modal-label-button-submit {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
+.modal-button-submit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .modal button[type="submit"] {
   width: 200px;
   height: 50px;
-  background: #188ce8;
+  background-color: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 0;
@@ -961,6 +970,13 @@ input[type="checkbox"]:checked + .modal-span-checkbox {
   line-height: 1.9;
   letter-spacing: 0.06em;
   color: #ffffff;
+cursor: pointer;
+  color: var(--color-background);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal button[type="submit"]:hover,
+.modal button[type="submit"]:focus {
+  background-color: #188ce8;
 }
 .modal-form-div {
   position: relative;
@@ -974,9 +990,7 @@ textarea[name="modal-form-comment"]:focus {
   border-color: #2196f3;
 }
 .modal-form-div:hover > .modal-form-input-icons,
-input[name="modal-form-name"]:focus ~ .modal-form-input-icons,
-input[name="modal-form-tel"]:focus ~ .modal-form-input-icons,
-input[name="modal-form-email"]:focus ~ .modal-form-input-icons {
+.modal-input-class:focus ~ .modal-form-input-icons {
   fill: #2196f3;
 }
 

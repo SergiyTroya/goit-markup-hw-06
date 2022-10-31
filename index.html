@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@500;700;900&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -381,8 +381,8 @@
     <footer>
       <!--Підвал-->
       <div class="container">
-        <ul class="footer-ul">
-          <li>
+        <div class="footer-container">
+        <div>
             <div class="footer-logo">
               <a href="/" class="logo text-decoration-none">
                 <span class="web">Web</span
@@ -390,9 +390,8 @@
               </a>
             </div>
 
-            <address class="footer-address">
-              <ul class="footer-info">
-                <li class="map-location">
+            <address class="footer-address footer-info">
+                <div class="map-location">
                   <a 
                     class="location text-decoration-none"
                     href="https://goo.gl/maps/7kxBD52CgUuhiN939"
@@ -400,27 +399,26 @@
                     rel="noopener nofollow noreferrer"
                     >м. Київ, пр-т Лесі Українки, 26</a
                   >
-                </li>
-                <li class="footer-link">
+                </div>
+                <div class="footer-link">
                   <a
                     class="footer-links-mail text-decoration-none"
                     href="mailto:info@devstudio.com"
                     >info@devstudio.com</a
                   >
-                </li>
-                <li>
+                </div>
+                <div>
                   <a
                     class="footer-links-tel text-decoration-none"
                     href="tel+380"
                   >
                     +38 096 111 11 11</a
                   >
-                </li>
-              </ul>
+                </div>
             </address>
-          </li>
-          <li>
-            <h3 class="footer-text">приєднуйтесь</h3>
+          </div>
+          <div class="footer-gap-div">
+            <p class="footer-text">приєднуйтесь</p>
             <ul class="soc-links">
               <li>
                 <a class="soc-links-buttons" href="/"><svg class="soc-links-logos" width="20" height="20">
@@ -443,11 +441,10 @@
                 </svg></a>
               </li>
             </ul>
-          </li>
-          <li>
-            <h3 class="footer-text">Підпишіться на розсилку</h3>
-            <form name="subscribe_form">
-              <label for="email"></label>
+          </div>
+          <div class="footer-gap-div">
+            <p class="footer-text">Підпишіться на розсилку</p>
+            <form class="subscribe_form" name="subscribe_form">
               <input id="email" name="email" type="email" placeholder="E-mail" />
               <button class="footer-subscribe-button" type="submit">Підписатися
                 <svg class="footer-telegram-icon" width="24" height="24">
@@ -455,39 +452,39 @@
                 </svg>
               </button>
             </form>
-          </li>
-        </ul>
+          </div>
       </div>
+    </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-button-close" type="button" data-modal-close><svg width="11" height="11"><use href="./icons/icons.svg#icon-x"></use></svg></button>
-        <h3 class="modal-first-text">Залиште свої дані, ми вам передзвонимо</h3>
+        <span class="modal-first-text">Залиште свої дані, ми вам передзвонимо</span>
         <form>
-          <label id="modal-label-name">
-            <h4>Ім'я</h4>
+          <label class="modal-labels">
+            <span class="modal-before-info">Ім'я</span>
             <div class="modal-form-div">
-            <input name="modal-form-name" />
+            <input class="modal-input-class" name="modal-form-name" />
           <svg class="modal-form-input-icons" width="18" height="18">
             <use href="./icons/icons.svg#icon-person-black"></use>
           </svg>
         </div>
           </label>
 
-          <label id="modal-label-tel">
-            <h4>Телефон</h4>
+          <label class="modal-labels">
+            <span class="modal-before-info">Телефон</span>
             <div class="modal-form-div">
-            <input type="tel" name="modal-form-tel" />
+            <input class="modal-input-class" type="tel" name="modal-form-tel" />
           <svg class="modal-form-input-icons" width="18" height="18">
             <use href="./icons/icons.svg#icon-phone-black"></use>
           </svg>
             </div>
           </label>
           
-          <label id="modal-label-email">
-            <h4>Пошта</h4>
+          <label class="modal-labels">
+            <span class="modal-before-info">Пошта</span>
             <div class="modal-form-div">
-            <input type="email" name="modal-form-email" />
+            <input class="modal-input-class" type="email" name="modal-form-email" />
           <svg class="modal-form-input-icons" width="18" height="18">
             <use href="./icons/icons.svg#icon-email-black"></use>
           </svg>
@@ -495,7 +492,7 @@
           </label>
 
           <label id="modal-label-comment">
-            <h4>Коментар</h4>
+            <span class="modal-before-info">Коментар</span>
             <textarea name="modal-form-comment" rows="5" placeholder="Введіть текст">
             </textarea>
           </label>
@@ -504,13 +501,11 @@
           <div class="modal-div-checkbox">
             <input type="checkbox" name="modal-form-checkbox-accept" value="modal-form-checkbox-accept" />
             <span class="modal-span-checkbox"></span>
-            <h3>Погоджуюся з розсилкою та приймаю</h3> <a href="/">Умови договору</a>
+            Погоджуюся з розсилкою та приймаю <a href="/">Умови договору</a>
           </div>
           </label>
           
-          <label id="modal-label-button-submit">
-            <button type="submit">Відправити</button>
-          </label>
+            <button class="modal-button-submit" type="submit">Відправити</button>
         </form>
       </div>
     </div>
